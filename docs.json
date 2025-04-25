@@ -23,7 +23,8 @@
           {
             "group": "Essenciais",
             "pages": [
-              "essenciais/criando-usuario"
+              "essenciais/criando-usuario",
+              "essenciais/criando-instituicao"
             ]
           }
         ]
