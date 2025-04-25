@@ -26,6 +26,12 @@
               "essenciais/criando-usuario",
               "essenciais/criando-instituicao"
             ]
+          },
+          {
+            "group": "Instituições",
+            "pages": [
+              "instituicao/adicionando-membros"
+            ]
           }
         ]
       }
