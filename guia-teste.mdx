@@ -1,37 +1,109 @@
 ---
-title: "Guia de Testes do Aplicativo"
-description: "Este documento descreve o passo a passo para a instalação, configuração e teste das funcionalidades básicas do aplicativo."
+title: "Guia de Testes do Aplicativo EduSocial"
+description: "Este documento orienta sobre a instalação, configuração e execução dos testes das funcionalidades básicas do aplicativo EduSocial."
 ---
 
-## Instalação do Aplicativo
+## 1. Instalação do Aplicativo
 
-Antes de iniciar os testes, é necessário realizar a instalação do aplicativo em seu dispositivo móvel:
+Antes de iniciar os testes, instale o aplicativo em seu dispositivo:
 
 - **Android:**\
   Baixe o arquivo `.apk` através deste [link de download](#).
 - **iOS:**\
-  Para testar no sistema iOS, é necessário utilizar um dispositivo MacOS para compilar o projeto. Siga o passo a passo disponível [neste link](https://github.com/EduSocialApp/mobile).
+  Para dispositivos Apple, é necessário utilizar um computador e executar o projeto localmente. As instruções estão disponíveis no repositório: [neste link](https://github.com/EduSocialApp/mobile).
 
-## Configuração Inicial para Testes
+## 2. Configuração Inicial para Testes
 
-Para garantir a validação completa das funcionalidades do primeiro protótipo, é necessário criar no mínimo **3 usuários** com os seguintes papéis:
+O teste deve contemplar os três perfis principais do sistema, garantindo uma avaliação completa:
 
 - **Aluno**
 - **Responsável pelo aluno**
 - **Responsável pela instituição**
 
-Essa configuração permite testar os principais fluxos de interação previstos para cada perfil de usuário.
+Cada cenário possui funcionalidades e fluxos específicos que devem ser validados.
 
-## Funcionalidades Básicas a Serem Testadas
+## 3. Funcionalidades Básicas a Serem Testadas
 
-Durante esta etapa, as seguintes funcionalidades devem ser avaliadas:
+Durante o processo de testes, avalie as seguintes funcionalidades:
 
-- [Cadastro e autenticação de usuários](https://edusocial.mintlify.app/essenciais/criando-usuario)
-- Envio e gerenciamento de **comunicados institucionais**
-- Recebimento de **notificações** sobre eventos, atividades escolares e alertas emergenciais
-- Acesso ao **calendário** com datas e eventos relevantes da instituição
+- Cadastro e autenticação de usuários
+- Emissão e recebimento de comunicados institucionais
+- Notificações sobre eventos, atividades e avisos
+- Visualização de calendário escolar
+- Publicações e interações entre usuários (alunos, responsáveis e instituições)
+- Enivo de mensagens particulares entre usuários
 
-## Feedback e Contribuição
+## 4. Cadastro de Usuário
+
+### Etapas do cadastro
+
+1. Acesse a tela de login ou apresentação e clique em: “Não tem uma conta? Criar agora”
+2. Preencha os campos obrigatórios:
+   - **Nome completo**
+   - **Apelido**
+   - **E-mail principal**
+   - **Data de nascimento**
+
+### Consentimentos
+
+Após inserir os dados, selecione as permissões desejadas:
+
+- Receber e-mails
+- Receber notificações
+- **Aceitar os Termos de Uso** _(obrigatório)_
+- **Aceitar a Política de Privacidade** _(obrigatório)_
+
+> **Atenção:**  aceitação dos termos e políticas é obrigatória para concluir o cadastro.
+
+### Definindo a senha
+
+- Crie uma senha com mínimo de 8 caracteres
+- Clique em “Completar cadastro” para finalizar
+
+## 5. Cenário: Responsável pela Instituição
+
+Inicialmente, qualquer usuários pode criar uma instituição dentro do EduSocial.
+
+### 5.1. Criando instituição
+
+1. Acesse o perfil do usuário logado (ícone inferior).
+2. Clique na engrenagem de configurações (canto superior direito).
+3. Na seção “Responsável por uma instituição?”, clique no botão correspondente.
+
+**<u>Dados exigidos</u>**
+
+Informe os seguintes dados:
+
+- CNPJ (com validação automática via Receita Federal)
+- Nome da instituição
+- Nome de exibição
+- E-mail institucional
+- Endereço completo (CEP, cidade, estado, rua, número, bairro, complemento)
+
+**<u>Finalização</u>**
+
+Após o preenchimento, clique em: “Enviar para análise”
+
+**<u>Acesso ao Ambiente de Testes de um usuário com instituição devidamente criada</u>**
+
+Para fins de demonstração, utilize as credenciais abaixo:
+
+- **Usuário:** `instituicao@teste.com.br`
+- **Senha:** `12345678`
+
+### 5.2. Criando postagem como instituição
+
+Para criar uma postagem como instituição é necessário entrar no perfil da instituição na qual é um dos membros responsáveis e clicar no botão \+. A postagem pode conter texto e imagens.
+
+### 5.3. Criando evento
+
+Para criar um evento é o mesmo fluxo da postagem, é necessário entrar no perfil da instituição que é responsável e clicar no botão \+
+
+O que irá diferenciar uma postagem para um evento, é a definição de horário de início e término do evento (opcional), podendo definir também o local do evento
+
+5.4. Adicionando alunos a instituição
+
+## 6. Feedback dos Testes
 
 Após concluir os testes das funcionalidades básicas, solicitamos que contribua preenchendo o questionário de feedback. Suas respostas serão fundamentais para a melhoria contínua do aplicativo e para a identificação de pontos de ajuste.
 

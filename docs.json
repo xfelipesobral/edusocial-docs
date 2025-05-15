@@ -32,6 +32,13 @@
             "pages": [
               "instituicao/adicionando-membros"
             ]
+          },
+          {
+            "group": "Documentos",
+            "pages": [
+              "documentos/politica-privacidade",
+              "termos-uso"
+            ]
           }
         ]
       }
